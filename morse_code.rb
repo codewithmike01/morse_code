@@ -19,4 +19,7 @@ def decode(sentence)
   puts ' '
 end
 
+decode('.-')
+decode('-- -.--')
+decode('-- -.--   -. .- -- .')
 decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
