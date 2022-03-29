@@ -6,7 +6,17 @@ def decode_char(morse)
     '...' => 'S', '-' => 'T', '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
     '-.--' => 'Y', '--..' => 'Z'
   }
-  puts morser[morse]
+  print morser[morse]
 end
 
-decode_char('--..')
+def decode_word(word)
+  word.split.each { |c| decode_char(c) }
+  print ' '
+end
+
+def decode(sentence)
+  sentence.split('   ').each { |w| decode_word(w) }
+  puts ' '
+end
+
+decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
